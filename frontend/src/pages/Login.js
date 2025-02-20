@@ -10,7 +10,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8080/api/auth/login", { email, password });
+      const response = await axios.post("https://newapp-ten-mauve.vercel.app/api/auth/login", { email, password });
       if (response.status === 200) {
         localStorage.setItem("user", JSON.stringify(response.data.user));
         window.location.href = "/dashboard";

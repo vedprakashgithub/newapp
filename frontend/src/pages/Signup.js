@@ -20,7 +20,7 @@ function Signup() {
         setError('');
         
         try {
-            const response = await axios.post('http://localhost:8080/api/auth/signup', userData);
+            const response = await axios.post('https://newapp-ten-mauve.vercel.app/api/auth/signup', userData);
             if (response.status === 201) {
                 alert('Account created successfully! Please log in.');
                 navigate('/login');
